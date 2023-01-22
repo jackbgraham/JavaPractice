@@ -1,5 +1,7 @@
 package mytutorials;
 
+import java.awt.*;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -39,6 +41,8 @@ public class Main {
         boolean insomnia = false;
         //boolean is a true or false value
 
+
+
         //orange words here are "reserved keywords"
 
         //now we're making reference types -----references------
@@ -57,5 +61,71 @@ public class Main {
         System.out.println(y);
         // this returns a value of 1, even though we have updated the value of x, we must feed new values into both
 
+        Point point1 = new Point(1, 1);
+        Point point2 = point1;
+        point1.x = 2;
+
+        System.out.println(point2);
+        //reference objects change unlike when you do this with primitives
+
+        String noodle = "spaghetti";
+        //strings need double quotes
+        //string is a "reference type"
+
+        String sauce = "marinara";
+        System.out.println( noodle + " with " + sauce + " sauce!");
+        //the + "concatenates" the strings
+
+        System.out.println(sauce.endsWith("a"));
+        //this checks the ending of a string and returns a boolean value
+        System.out.println(sauce.startsWith("p"));
+        //same, but the beginning
+        System.out.println(sauce.length());
+        //this method returns the number of characters a string
+        System.out.println(sauce.indexOf("n"));
+        // returns the position of a character in the sting, counts from 0
+        System.out.println(sauce.replace("m", "c"));
+        //we can use this to auto filter cusswords I guess?
+        System.out.println(sauce.replace("marinara", "!@#$%"));
+        //.replace does not modify the original string
+        //strings are IMMUTABLE
+        System.out.println(sauce.toUpperCase());
+        //.trim cuts off extra spaces at the beginning and end
+
+        //parameters are the undefined holes in the methods
+        //arguments are the values passed into the methods
+        //arguments go into the parameters
+
+        //escape character
+
+        System.out.println("gentlemen! I have \"escaped\" ");
+        //this lets us add reserved character types into the print string
+        System.out.println(("C:\\Windows\\Desktop\\cat_pictures"));
+        //to display a backslash, you have to do 2 of them cause escape character
+        System.out.println("gentlemen! \n this is a new line \n \t and this is a tab");
+
+        //let's make some arrays
+
+        int[] numberArray = new int[5];
+        numberArray[0] = 1;
+        numberArray[1] = 2;
+        numberArray[2] = 3;
+        numberArray[3] = 4;
+        numberArray[4] = 5;
+
+        System.out.println(numberArray);
+        // this returns [I@41629346, which is the memory address of numberArray
+        System.out.println(Arrays.toString(numberArray));
+        //this prints the array's contents
+
+        //number arrays are initialized at all 0
+        //boolean arrays are initialized at all false
+        //string arrays are initialized at 'empty string'
+
+        //here is a more handsome way to initialize your array
+        int[] numberArray2 = { 1, 2, 4, 8, 16};
+        System.out.println("numberArray2 has an index of " + numberArray2.length);
+        System.out.println("here is numberArray2 " + Arrays.toString(numberArray2));
+        //we cannot add or remove index length to/from an array once initialized
     }
 }
