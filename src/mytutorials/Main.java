@@ -185,6 +185,34 @@ public class Main {
         int eresting = shorty + 1;
         System.out.println(eresting);
         //here the short is cast to an int, because ints are larger than shorts
+        // byte > short > int > long > float > double
+        //BSILFD
+        //explicit casting
+        //(int)x + 2;
+
+        //Integer is the wrapper class for int
+        //to cast strings into ints we use Integer.parseInt("string");
+        System.out.println("I like the number 5"); //cannot parse from a sentence
+        System.out.println(Integer.parseInt("5"));
+        //values from dropdowns are typically in string format
+
+        //rounding a number, Math.round() has two modalities
+        //convert float > int
+        //convert double > long
+
+        //Math.ceil(1.1F) = 2 the ceiling, next integer equal to or greater than()
+        //Math.floor(1.1F) = 1 the floor, next integer equal to or lower than()
+
+        //Math.max(int a, int b) returns the number (int, long, float, double) with highest value
+        //Math.min(int a, int b) same deal, but the lower number
+        //Math.random(), returns a random double between 0 and 1
+        //Math.random() * 100; returns a random number between 0 and 100
+        double mysteryNumber = Math.round(Math.random() *100);
+        System.out.println(mysteryNumber);
+        int mysteryNumber2 = (int)Math.round(Math.random() *100);
+        System.out.println(mysteryNumber2);
+        int mysterynumber3 = (int)(Math.random() *100);
+        System.out.println(mysterynumber3);
 
 
 
