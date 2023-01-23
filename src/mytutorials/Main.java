@@ -127,5 +127,67 @@ public class Main {
         System.out.println("numberArray2 has an index of " + numberArray2.length);
         System.out.println("here is numberArray2 " + Arrays.toString(numberArray2));
         //we cannot add or remove index length to/from an array once initialized
+
+        //Arrays.sort orders the index numerically
+
+        //2D array, a table basically
+        int[][] twoDArray = new int[2][3];
+        //this is 2 rows, then three columns
+        twoDArray[0][0] = 1;
+        //this puts a value of 1 in the top left square of the array
+        System.out.println(Arrays.deepToString(twoDArray));
+        //deepToString must be used when calling forth the 2d array
+        int[][] secondTwoDArr = {{1, 2, 3}, {4, 5, 6}};
+        System.out.println(Arrays.deepToString(secondTwoDArr));
+
+        final float pi = 3.14F;
+        //final makes this a constant, value is immutable
+
+        //an expression is a piece of code that produces a value
+
+        //% modulus is the remainder of a division, 9/2 has a modulus of 1
+
+        double result = (double)10 / (double)3;
+        System.out.println(result);
+
+        //the ++ is called the increment operator
+        int q = 1;
+        q++;
+        System.out.println(q);
+        //the increment operator adds +1 to a variable
+        //-- is the decrement operator
+
+        int w = 1;
+        int e = w++;
+        //this results in w = 2, and e = 1
+        //e takes the value of w, 1, then increments the value of w, but does not update the value of e
+        // however, if we change it to int e = ++w;
+        //the increment operator in front, with be executed before a value is assigned to e
+        //they will both equal 2 in this case
+
+        //the augmented/compound assignment operators
+        //to increment by more than one
+        int r = 1;
+        r += 2;
+        //this updaters the value of r to 3
+        r -= 2;
+        //back to 1
+        r *= 2;
+        //back to two
+        r /= 2;
+        //and back to 1
+
+        int t = 10 + 3 * 2;
+        //this equals 16 cause PEMDAS, java follows PEMDAS
+
+        //implicit casting / conversion
+        short shorty = 1;
+        int eresting = shorty + 1;
+        System.out.println(eresting);
+        //here the short is cast to an int, because ints are larger than shorts
+
+
+
+
     }
 }
