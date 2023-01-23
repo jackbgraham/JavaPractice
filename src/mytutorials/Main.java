@@ -1,6 +1,7 @@
 package mytutorials;
 
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -214,7 +215,16 @@ public class Main {
         int mysterynumber3 = (int)(Math.random() *100);
         System.out.println(mysterynumber3);
 
+        //NumberFormat, an abstract class, it cannot be instantiated with "new"
+        //NumberFormat.getCurrencyInstance() is a factory method, because it creates an object
+        NumberFormat dollars = NumberFormat.getCurrencyInstance();
+        String myCash = dollars.format(12353.948);
+        System.out.println(myCash);
+        NumberFormat gpa = NumberFormat.getPercentInstance();
+        String myGpa = gpa.format(0.975);
+        System.out.println(myGpa);
 
+        //1:25
 
 
     }
