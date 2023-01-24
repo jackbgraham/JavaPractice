@@ -4,6 +4,7 @@ import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
 
@@ -224,7 +225,21 @@ public class Main {
         String myGpa = gpa.format(0.975);
         System.out.println(myGpa);
 
-        //1:25
+        //scanner//
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your age?");
+        byte years = scanner.nextByte();
+        System.out.println("You are " + years + " old");
+
+        System.out.print("Name:");
+        String name = scanner.next();
+        //scanner.next reads one token, a chunk of characters
+        System.out.println("You are " + name);
+
+        //scanner.nextLine() reads the entire line
+
+
 
 
     }
