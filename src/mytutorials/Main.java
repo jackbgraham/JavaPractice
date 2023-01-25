@@ -1,5 +1,9 @@
+// tutorial video coding with Mosh https://www.youtube.com/watch?v=eIrMbAQSU34&t=433s
+
+
 package mytutorials;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 
 import java.awt.*;
@@ -239,7 +243,40 @@ public class Main {
 
         //scanner.nextLine() reads the entire line
 
+        // this consumes the dangling newline character or the next nextLine is skipped
+        scanner.nextLine();
+        //Although this solution works, you'll have to add additional
+        // scanner.nextLine() calls whenever you call any of the other
+        // methods. It's fine for smaller programs but in larger ones,
+        // this can get very ugly very quick. (freecodecamp.org)
 
+        System.out.println("type something with extra spaces at the beginning:");
+        String something = scanner.nextLine().trim();
+        System.out.println("you wrote: " + something + " wow, the extra spaces are gone!");
+        //here .trim() takes off extra spaces on the ends of the string
+
+        // Mortage calculator
+        System.out.println("Principal: ");
+        double principal = scanner.nextDouble();
+        System.out.println("Annual Interest Rate: ");
+        double apr = scanner.nextDouble();
+        System.out.println("Loan period (years):");
+        double length = scanner.nextDouble();
+        System.out.println("Annual property taxes:");
+        double taxes = scanner.nextDouble();
+
+        double mInterest = (apr / 100) / 12;
+        //12 months
+        double payments = length * 12;
+
+
+        double m1 = mInterest * Math.pow(1 + mInterest, payments);
+        double m2 = Math.pow(1 + mInterest, payments) - 1;
+        double mPayments = principal * (m1 / m2) + (taxes / 12);
+        DecimalFormat df = new DecimalFormat("$#####.##");
+
+        System.out.println("Monthly payment = " + df.format(mPayments));
+//        System.out.println("*this does not include property taxes");
 
 
 
