@@ -3,6 +3,7 @@
 
 package mytutorials;
 
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.Date;
 
@@ -14,7 +15,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main (String[] args){
+    public static void main (String[] args) {
         int age = 36;
         //variable initialized
         age = 37;
@@ -43,7 +44,7 @@ public class Main {
         char mysteryLetter = 'A';
         //we must use single quotes for char, char represents a unicode character
         char omega = '\u03A9';
-        char[] charArray = {'a','z','\u03A9'};
+        char[] charArray = {'a', 'z', '\u03A9'};
         //the unicode is the same as just typing a letter, for this primitive
         boolean sleepy = true;
         boolean insomnia = false;
@@ -79,7 +80,7 @@ public class Main {
         //string is a "reference type"
 
         String sauce = "marinara";
-        System.out.println( noodle + " with " + sauce + " sauce!");
+        System.out.println(noodle + " with " + sauce + " sauce!");
         //the + "concatenates" the strings
 
         System.out.println(sauce.endsWith("a"));
@@ -129,7 +130,7 @@ public class Main {
         //string arrays are initialized at 'empty string'
 
         //here is a more handsome way to initialize your array
-        int[] numberArray2 = { 1, 2, 4, 8, 16};
+        int[] numberArray2 = {1, 2, 4, 8, 16};
         System.out.println("numberArray2 has an index of " + numberArray2.length);
         System.out.println("here is numberArray2 " + Arrays.toString(numberArray2));
         //we cannot add or remove index length to/from an array once initialized
@@ -153,7 +154,7 @@ public class Main {
 
         //% modulus is the remainder of a division, 9/2 has a modulus of 1
 
-        double result = (double)10 / (double)3;
+        double result = (double) 10 / (double) 3;
         System.out.println(result);
 
         //the ++ is called the increment operator
@@ -213,11 +214,11 @@ public class Main {
         //Math.min(int a, int b) same deal, but the lower number
         //Math.random(), returns a random double between 0 and 1
         //Math.random() * 100; returns a random number between 0 and 100
-        double mysteryNumber = Math.round(Math.random() *100);
+        double mysteryNumber = Math.round(Math.random() * 100);
         System.out.println(mysteryNumber);
-        int mysteryNumber2 = (int)Math.round(Math.random() *100);
+        int mysteryNumber2 = (int) Math.round(Math.random() * 100);
         System.out.println(mysteryNumber2);
-        int mysterynumber3 = (int)(Math.random() *100);
+        int mysterynumber3 = (int) (Math.random() * 100);
         System.out.println(mysterynumber3);
 
         //NumberFormat, an abstract class, it cannot be instantiated with "new"
@@ -278,7 +279,94 @@ public class Main {
         System.out.println("Monthly payment = " + df.format(mPayments));
 //        System.out.println("*this does not include property taxes");
 
+        //conditional statement time
+        // x == y this is the equality operator, compares value
+        // x = y this is the assignment operator, assigns value
+        // x != y this is the inequality operator, compares value, but negatively
+        // we can also use these guys <, <=, >, >=
+        // && the "and" operator, || the "or" operator,
+        // ! the "not" operator, goes at the beginning of a variable
 
+        //imaginary loan application
+        boolean hasHighIncome = false;
+        boolean hasGoodCredit = true;
+        boolean hasCriminalRecord = false;
+        boolean isEligible = (hasHighIncome || hasGoodCredit) && !hasCriminalRecord;
+        //if one of these is true, AND false on hasCriminalRecord then isEligible will be true
+
+        //if statement
+        int temp = 32;
+        if (temp > 32) {
+            System.out.println("it's a hot day");
+            System.out.println("drink water");
+        }
+        else if (temp > 20)
+            System.out.println("what a nice day");
+        else
+            System.out.println("cold day");
+
+
+        int radiation = 10_000;
+        boolean highRadiation = (radiation > 1_000);
+        //booleans default to false, this is a conditional statement that sets the boolean to true
+
+        //the ternary operator
+        //it's ternary cause there are three parts
+         int salary = 120_000;
+         String className = salary > 100_000 ? "First" : "Economy";
+//         if (salary > 100_000)
+//             className = "First";
+
+        // ternary format ___ ? ___ : ___
+        // (is this true) ? (if so, this) : (else, this)
+        // (condition) ? (value) : (value)
+
+        //switch statements
+
+        String role = "admin";
+
+        switch  (role) {
+            case "admin":
+                System.out.println("You're an admin Harry");
+                break;
+            case "moderator" :
+                System.out.println("You're a moderator");
+                break;
+            default :
+                System.out.println("You're a guest user");
+        }
+
+//        if (role == "admin")
+//            System.out.println("You're an admin Harry");
+//        else if (role == "moderator")
+//            System.out.println("You're a moderator");
+//        else
+//            System.out.println("You're a guest user");
+
+        //fizz buzz
+
+        Scanner scanRRR = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int number = scanRRR.nextInt();
+
+//        if (number % 5 == 0)
+//            System.out.println("Fizz");
+//        else if (number % 3 == 0)
+//            System.out.println("Buzz");
+//        else if (number % 5 == 0 && number % 3 == 0)
+//            System.out.println("FizzBuzz");
+//        else
+//            System.out.println(number);
+// this is wrong, because the most specific instructions should come first
+        if (number % 5 == 0 && number % 3 == 0)
+            System.out.println("FizzBuzz");
+        else if (number % 5 == 0)
+            System.out.println("Fizz");
+        else if (number % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(number);
+//DRY Don't Repeat Yourself
 
     }
 }
