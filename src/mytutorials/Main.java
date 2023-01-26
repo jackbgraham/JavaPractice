@@ -3,6 +3,7 @@
 
 package mytutorials;
 
+import java.security.Principal;
 import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.Date;
@@ -435,7 +436,7 @@ public class Main {
 
         //String[] an array of Strings
 
-        String[] fruits = { "Fig", "Loquat", "Pomegranate", "Peach", "Pear", "Apricot"};
+//        String[] fruits = { "Fig", "Loquat", "Pomegranate", "Peach", "Pear", "Apricot"};
 
 //        for (int i = 0; i < fruits.length; i++)
 //            System.out.println(fruits[i]);
@@ -452,7 +453,54 @@ public class Main {
 
         //we can't go backwards in a for each loop, because there's no option to decrement i--
 
-            for (int i = fruits.length; i > 0; i--)
-                System.out.println(fruits[i]);
+//            for (int i = fruits.length - 1; i >= 0; i--)
+//                System.out.println(fruits[i]);
+//            //we need a minus 1 after fruits.length here, because indices start at 0
+
+        //mortgage calculator with error handling
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+////        System.out.println("Enter the principal amount ($1k - $1M): ");
+//        double principal = 1;
+//        while (principal < 1_000 || principal > 1_000_000_000) {
+//            System.out.println("Enter the principal amount ($1k - $1M): ");
+//            principal = scanner.nextDouble();
+//        }
+////        System.out.println(principal);
+//
+//        double apr = -1;
+//        while (apr < 0 || apr > 100){
+//            System.out.println("Annual Interest Rate: ");
+//            apr = scanner.nextDouble();
+//        }
+////        System.out.println(apr);
+//
+//        double length = -1;
+//        while (length < 0 || length > 31){
+//            System.out.println("Loan period (years):");
+//            length = scanner.nextDouble();
+//        }
+////        System.out.println(length);
+//
+//        double taxes = -1;
+//        while (taxes < 0){
+//            System.out.println("Annual property taxes:");
+//            taxes = scanner.nextDouble();
+//        }
+//
+//
+//        double mInterest = (apr / 100) / 12;
+//        //12 months
+//        double payments = length * 12;
+//
+//
+//        double m1 = mInterest * Math.pow(1 + mInterest, payments);
+//        double m2 = Math.pow(1 + mInterest, payments) - 1;
+//        double mPayments = principal * (m1 / m2) + (taxes / 12);
+//        DecimalFormat df = new DecimalFormat("$#####.##");
+//
+//        System.out.println("Monthly payment = " + df.format(mPayments));
+
     }
 }
