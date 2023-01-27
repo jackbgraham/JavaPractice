@@ -6,17 +6,17 @@ package mytutorials;
 import java.security.Principal;
 import java.sql.SQLOutput;
 import java.text.DecimalFormat;
-import java.util.Date;
+import java.util.*;
 
 import java.awt.*;
 import java.text.NumberFormat;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main (String[] args) {
+
+
 //        int age = 36;
 //        //variable initialized
 //        age = 37;
@@ -589,5 +589,81 @@ public class Main {
 
         //#19
 
+
+
+        //----------------------------------------------------------------
+
+
+        public int romanToInteger(String str){
+
+            int d = 0;
+            int temp = 0;
+            int sum =0;
+            for (int i = str.length()-1; i >= 0; i++){
+                switch(str.charAt(i)){
+                    case 'I': d=1;
+                        break;
+                    case 'V': d=5;
+                        break;
+                    case 'X': d=10;
+                        break;
+                    case 'L': d=50;
+                        break;
+                    case 'C': d=100;
+                        break;
+                    case 'D': d=500;
+                        break;
+                }
+                if(d < temp){
+                    sum = sum - d;
+                    temp = d;
+                } else {
+                    sum = sum + d;
+                    temp = d;
+                }
+            }
+            return sum;
+
+
+//    public int numeralConvert(String str) {
+//    }
+        public static void numeralConvert(String args[]){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a Roman numeral: ");
+            String str = scanner.nextLine();
+            NumeralConversion obj = new NumeralConversion();
+            int result = obj.numeralConvert(str);
+            System.out.println("Integer Number: " + result);
+        }
+
     }
+//convert Roman Numerals into Integers
+
+//        String s;
+//
+//        public int romanToInt(String s){
+//            Map<Character, Integer> map = new HashMap<>();
+//            map.put('I', 1);
+//            map.put('V', 5);
+//            map.put('X', 10);
+//            map.put('L', 50);
+//            map.put('C', 100);
+//            map.put('D', 500);
+//            map.put('M', 1000);
+//
+//            int result = 0;
+//            for (int i = 0; i < (s.length); i++) {
+//
+//                if (i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i - 1))) {
+//                    result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i - 1));
+//                } else {
+//
+//                    result += map.get(s.charAt(i));
+//                }
+//            }
+//        }
+
+
+
+}
 }
