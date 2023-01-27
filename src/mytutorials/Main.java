@@ -502,5 +502,92 @@ public class Main {
 //
 //        System.out.println("Monthly payment = " + df.format(mPayments));
 
+        //interview questions https://www.youtube.com/watch?v=-rw8iIsAF5I
+
+        //#1 What is JIT?
+        //Just-In-Time Compiler. It increases efficiancy of the interpreter by compiling the bytecode in the runtime.
+        //JIT compiles Code to machine level directly for higher speeds of code execution.
+
+        //#2 What is a ClassLoader?
+        //The first file to load when you execute a java program
+        //a classloader in Java is a subsystem of Java Virtual Machine, dedicated to load class files when a program is executed
+        //Java has Bootstrap, Extension, and Application classloaders
+
+        //#3 What are the memory allocations available in Java?
+        //Java has 5 MAJOR types of memory allocations
+        //1- Class Memory
+        //2- Heap Memory
+        //3- Stack Memory
+        //4- Program Counter Memory
+        //5- Native Method Stack Memory
+
+        //#4 Will the program run if I write static public void main?
+        //yes, but it's usually public static void main
+        //Java has no specific rule for the order of specifiers
+
+        //#5 What is the default value stored in local variables?
+        //the value will be a garbage value, usually 0
+        //Neither the local variables nor any primitives or object references have any default value stored in them.
+
+        //#6 What is the output of the following code segment?
+        //concatenation vs addition operator
+//        System.out.println(100 + 100 + "hello");
+        //this prints out 200hello
+        //first java recognizes the + as an addition operator, so the numbers are added
+        //you cannot add numbers and strings, so the + is now recognized as a concatenation
+//        System.out.println("hello" + 100 + 100);
+        //once the + is recognized as a concatenation, all following + in the line will also be
+        // here the numbers are not added, and the result is "hello100100"
+
+        //#7 What is an association?
+        //an association is a relationship where there is no ownership/hierarchy
+
+        //#8 What is a copy constructor in Java?
+        //A copy constructor in Java is a constructor that initializes an object through another object of the same class
+
+        //#9 What is a marker interface?
+        //an empty interface in Java referred as a Marker interface.
+        // "Serializable" and "Cloneable" are some popular examples
+        //there is no data manipulation
+
+        //#10 What is object cloning?
+        //recreating an object completely
+
+        //#11 Why is Java not completely object oriented?
+        //Java is not 100% OOP because it makes use of primitive datatypes like int, flot, double, etc
+
+        //#12 define wrapper classes in java
+        //when you declare primitive datatypes, the wrapper classes are responsible for converting them into objects (reference types)
+
+        //#13 Define singleton classes in java
+        //In Java, when you make the constructor of a class as private, then that particular class can generate only one single object.
+        //This type of class (private) is called a Singleton Class.
+
+        //#14 Define package in Java
+        //A package is a collective bundle of classes and interfaces along with the necessary libraries and JAR files.
+        //The use of packages helps in code reusability.
+
+        //#15 Can you implement pointers in a Java program?
+        //pointer is a thing in C to directly access the memory
+        // - NO -
+        //Java Virtual Machine takes care of memory management implicitly.
+        //Java's major motto was to keep programing simple.
+        //So, accessing memory directly through pointers is not a feature of Java.
+
+        //#16 Differentiate between instance variables and local variables
+        //Instance variables are declared inside a class and the scope is limited to only a specific object.
+        //Local variables can be anywhere inside a method, or a specific block of code
+
+        //#17 Explain the Java String Pool
+        // The String Pool is a collection of strings in Java's Heap memory.
+        //If you create a String object, JVM first checks for the presence of the object in the pool.
+        //If that String already exists, the same reference object is shared with the variable, else a new object is created.
+
+        //#18 What is an exception?
+        //An Exception in Java is considered as an unexpected event that can disrupt the normal flow of the program.
+        //These events can be fixed through the process of Exception Handling.
+
+        //#19
+
     }
 }
