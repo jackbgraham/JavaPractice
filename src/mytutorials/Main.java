@@ -669,15 +669,15 @@ public class Main {
 
         //you must read 3 integers from stdin and stdout, each int must be printed on a new line
 
-        Scanner scanner = new Scanner(System.in);
-        int a, b, c = 0;
-        System.out.println("Enter an integer:");
-        a = scanner.nextInt();
-        System.out.println("Enter a second integer:");
-        b = scanner.nextInt();
-        System.out.println("Enter a third integer:");
-        c = scanner.nextInt();
-        System.out.println(a + "\n" + b + "\n" + c );
+//        Scanner scanner = new Scanner(System.in);
+//        int a, b, c = 0;
+//        System.out.println("Enter an integer:");
+//        a = scanner.nextInt();
+//        System.out.println("Enter a second integer:");
+//        b = scanner.nextInt();
+//        System.out.println("Enter a third integer:");
+//        c = scanner.nextInt();
+//        System.out.println(a + "\n" + b + "\n" + c );
 
         //the lame way it wants you to do it
 //        a = scanner.nextInt();
@@ -688,7 +688,21 @@ public class Main {
 //        System.out.println(c);
 
         //-------------------------------------------------
-
+        //yet another fizzbuzz
+        // Write a program that prints from 1 to 100 on a new line
+        for (int i = 1; i < 101; i++){
+            if(i % 3 == 0){
+                if(i % 5 == 0){
+                    System.out.println("FizzBuzz");
+                } else {
+                    System.out.println("Fizz");
+                }
+            } else if(i % 5 == 0){
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
 
 
