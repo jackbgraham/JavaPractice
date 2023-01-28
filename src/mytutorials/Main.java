@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class Main {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
 
 //        int age = 36;
@@ -590,12 +590,9 @@ public class Main {
         //#19
 
 
-
         //----------------------------------------------------------------
 
         //convert Roman Numerals into Integers
-
-
 
 
 //        String s;
@@ -637,23 +634,34 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = 0;
 
-        while (n < 1 || n > 100){
+        while (n < 1 || n > 100) {
             System.out.println("Enter an integer ranging between 1 and 100");
             n = scanner.nextInt();
         }
-        if ((n % 2) != 0) {
+//        if ((n % 2) != 0) {
+//            System.out.println("Weird");
+//        } else if ((n % 2) == 0 && (n >= 2 && n < 5)){
+//            System.out.println("Not Weird");
+//        } else if ((n % 2) == 0 && (n >= 6 && n < 21)){
+//            System.out.println("Weird");
+//        } else if ((n % 2) == 0 && n > 20){
+//            System.out.println("Not Weird");
+//        }
+
+        boolean isOdd = (n % 2 == 1);
+
+        if (isOdd) {
             System.out.println("Weird");
-        } else if ((n % 2) == 0 && (n >= 2 && n < 5)){
-            System.out.println("Not Weird");
-        } else if ((n % 2) == 0 && (n >= 6 && n < 21)){
-            System.out.println("Weird");
-        } else if ((n % 2) == 0 && n > 20){
-            System.out.println("Not Weird");
+        } else {
+            if (n >= 2 && n < 5) {
+                System.out.println("Not Weird");
+            } else if (n >= 6 && n < 21) {
+                System.out.println("Weird");
+            } else if (n > 20) {
+                System.out.println("Not Weird");
+            }
+
+
         }
-
-
-
-
-
-}
+    }
 }
