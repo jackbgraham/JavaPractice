@@ -764,29 +764,43 @@ public class Main {
         //2 - Determine if A is lexicographically larger than B (dictionary order)
         //3 - Capitalize the first letter of A and B, then print them on a line with a space between
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("enter a word");
+//        String A = scanner.next().toLowerCase();
+//        System.out.println("enter a second word");
+//        String B = scanner.next().toLowerCase();
+//
+//        int totalLength = A.length() + B.length();
+//        System.out.println("Character total = " + totalLength);
+//
+//        int n = (A.compareTo(B));
+//        if (n == 0){
+//            System.out.println("these words begin with the same letter");
+//        } else if (n < 0){
+//            System.out.println(A + " comes before " + B + " lexicographically");
+//        } else {
+//            System.out.println(B + " comes before " + A + " lexicographically");
+//        }
+//
+//        String C = A.substring(0, 1).toUpperCase() + A.substring(1);
+//        String D = B.substring(0, 1).toUpperCase() + B.substring(1);
+//        System.out.println(C + " " + D);
+//-------------------------------------------------
+
+        //Java String Tokens
+        //a token is one or more consecutive english letters
+        //split a string into tokens and print each token onto a new line
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter a word");
-        String A = scanner.next().toLowerCase();
-        System.out.println("enter a second word");
-        String B = scanner.next().toLowerCase();
 
-        int totalLength = A.length() + B.length();
-        System.out.println("Character total = " + totalLength);
+        String s = scanner.nextLine().toString();
+        String t = "Yee haw partner!";
+        String delimit = "[.,?! '_@]+";
 
-        int n = (A.compareTo(B));
-        if (n == 0){
-            System.out.println("these words begin with the same letter");
-        } else if (n < 0){
-            System.out.println(A + " comes before " + B + " lexicographically");
-        } else {
-            System.out.println(B + " comes before " + A + " lexicographically");
-        }
+        String [] tokens = s.split(delimit);
 
-        String C = A.substring(0, 1).toUpperCase() + A.substring(1);
-        String D = B.substring(0, 1).toUpperCase() + B.substring(1);
-        System.out.println(C + " " + D);
-
-
+        System.out.println(tokens.length);
+        for(String token: tokens)
+            System.out.println(token);
 
     }
 }
