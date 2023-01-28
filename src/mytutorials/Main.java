@@ -593,51 +593,10 @@ public class Main {
 
         //----------------------------------------------------------------
 
-
-        public int romanToInteger(String str){
-
-            int d = 0;
-            int temp = 0;
-            int sum =0;
-            for (int i = str.length()-1; i >= 0; i++){
-                switch(str.charAt(i)){
-                    case 'I': d=1;
-                        break;
-                    case 'V': d=5;
-                        break;
-                    case 'X': d=10;
-                        break;
-                    case 'L': d=50;
-                        break;
-                    case 'C': d=100;
-                        break;
-                    case 'D': d=500;
-                        break;
-                }
-                if(d < temp){
-                    sum = sum - d;
-                    temp = d;
-                } else {
-                    sum = sum + d;
-                    temp = d;
-                }
-            }
-            return sum;
+        //convert Roman Numerals into Integers
 
 
-//    public int numeralConvert(String str) {
-//    }
-        public static void numeralConvert(String args[]){
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter a Roman numeral: ");
-            String str = scanner.nextLine();
-            NumeralConversion obj = new NumeralConversion();
-            int result = obj.numeralConvert(str);
-            System.out.println("Integer Number: " + result);
-        }
 
-    }
-//convert Roman Numerals into Integers
 
 //        String s;
 //
@@ -662,6 +621,37 @@ public class Main {
 //                }
 //            }
 //        }
+//---------------------------------------------------------------
+
+        //if n is odd, print Weird
+        //if n is even and in the inclusive range of 2 to 5, print Not Weird
+        //if n is even and in the inclusive range of 6 to 20 print Weird
+        //if n is even and greater than 20, print Not weird
+
+        //input format = a single line containing positive integer n
+
+        //constraints = 1 <= n <= 100
+
+        //output format = "Weird" or "Not Weird"
+
+        Scanner scanner = new Scanner(System.in);
+        int n = 0;
+
+        while (n < 1 || n > 100){
+            System.out.println("Enter an integer ranging between 1 and 100");
+            n = scanner.nextInt();
+        }
+        if ((n % 2) != 0) {
+            System.out.println("Weird");
+        } else if ((n % 2) == 0 && (n >= 2 && n < 5)){
+            System.out.println("Not Weird");
+        } else if ((n % 2) == 0 && (n >= 6 && n < 21)){
+            System.out.println("Weird");
+        } else if ((n % 2) == 0 && n > 20){
+            System.out.println("Not Weird");
+        }
+
+
 
 
 
