@@ -631,37 +631,68 @@ public class Main {
 
         //output format = "Weird" or "Not Weird"
 
-        Scanner scanner = new Scanner(System.in);
-        int n = 0;
-
-        while (n < 1 || n > 100) {
-            System.out.println("Enter an integer ranging between 1 and 100");
-            n = scanner.nextInt();
-        }
-//        if ((n % 2) != 0) {
+//        Scanner scanner = new Scanner(System.in);
+//        int n = 0;
+//
+//        while (n < 1 || n > 100) {
+//            System.out.println("Enter an integer ranging between 1 and 100");
+//            n = scanner.nextInt();
+//        }
+////        if ((n % 2) != 0) {
+////            System.out.println("Weird");
+////        } else if ((n % 2) == 0 && (n >= 2 && n < 5)){
+////            System.out.println("Not Weird");
+////        } else if ((n % 2) == 0 && (n >= 6 && n < 21)){
+////            System.out.println("Weird");
+////        } else if ((n % 2) == 0 && n > 20){
+////            System.out.println("Not Weird");
+////        }
+//
+//        boolean isOdd = (n % 2 == 1);
+//
+//        if (isOdd) {
 //            System.out.println("Weird");
-//        } else if ((n % 2) == 0 && (n >= 2 && n < 5)){
-//            System.out.println("Not Weird");
-//        } else if ((n % 2) == 0 && (n >= 6 && n < 21)){
-//            System.out.println("Weird");
-//        } else if ((n % 2) == 0 && n > 20){
-//            System.out.println("Not Weird");
+//        } else {
+//            if (n >= 2 && n < 5) {
+//                System.out.println("Not Weird");
+//            } else if (n >= 6 && n < 21) {
+//                System.out.println("Weird");
+//            } else if (n > 20) {
+//                System.out.println("Not Weird");
+//            }
+//
+//
 //        }
 
-        boolean isOdd = (n % 2 == 1);
+        //-------------------------------------------------
+        //Java Standard input output "stdin" & "stdout"
 
-        if (isOdd) {
-            System.out.println("Weird");
-        } else {
-            if (n >= 2 && n < 5) {
-                System.out.println("Not Weird");
-            } else if (n >= 6 && n < 21) {
-                System.out.println("Weird");
-            } else if (n > 20) {
-                System.out.println("Not Weird");
-            }
+        //you must read 3 integers from stdin and stdout, each int must be printed on a new line
+
+        Scanner scanner = new Scanner(System.in);
+        int a, b, c = 0;
+        System.out.println("Enter an integer:");
+        a = scanner.nextInt();
+        System.out.println("Enter a second integer:");
+        b = scanner.nextInt();
+        System.out.println("Enter a third integer:");
+        c = scanner.nextInt();
+        System.out.println(a + "\n" + b + "\n" + c );
+
+        //the lame way it wants you to do it
+//        a = scanner.nextInt();
+//        b = scanner.nextInt();
+//        c = scanner.nextInt();
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println(c);
+
+        //-------------------------------------------------
 
 
-        }
+
+
+
+
     }
 }
