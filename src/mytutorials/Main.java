@@ -634,7 +634,7 @@ public class Main {
 //        Scanner scanner = new Scanner(System.in);
 //        int n = 0;
 //
-//        while (n < 1 || n > 100) {
+//        while (n <= 1 || n >= 100) {
 //            System.out.println("Enter an integer ranging between 1 and 100");
 //            n = scanner.nextInt();
 //        }
@@ -707,15 +707,56 @@ public class Main {
         //given a number "n", print it's first 10 multiples,
         // Each multiple N x i where i is between 1 and 10 should be on a new line
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter an integer: ");
+//        int n = scanner.nextInt();
+//        for (int i = 1; i < 11; i++){
+////            System.out.println(n * i);
+//
+//            System.out.println(n + " x " + i + " = " + (n * i));
+//        }
+
+//-------------------------------------------------
+        //given a numnber n, determine which data type, byte int short long, it can fit into
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter yerself an integer there pilgrim: ");
+//        long n = scanner.nextLong();
+//
+//        boolean byTE = n > -128 && n < 128;
+//        boolean shoRT = n > -32_768 && n < 32_768;
+//        boolean iNT = n > Math.pow(-2, 31) && n < (Math.pow(2, 31) - 1);
+//        boolean loNG = n > Math.pow(-2, 63) && n < (Math.pow(2, 63) - 1);
+
+//        if (byTE){
+//            System.out.println("byte");
+//        }
+//        if (shoRT){
+//            System.out.println("short");
+//        }
+//        if (iNT){
+//            System.out.println("int");
+//        }
+//        if (loNG){
+//            System.out.println("long");
+//        }
+//-------------------------------------------------
+        //int to String
+        // n ranges between -100 to 100
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter an integer: ");
-        int n = scanner.nextInt();
-        for (int i = 1; i < 11; i++){
-//            System.out.println(n * i);
 
-            System.out.println(n + " x " + i + " = " + (n * i));
+        int n = 101;
+//        while (n > -101 && n < 100){
+//            System.out.println("Enter an integer between -100 and 100");
+//            n = scanner.nextInt();
+//        }
+        while (n <= -101 || n >= 100) {
+            System.out.println("Enter an integer ranging between -101 and 100");
+            n = scanner.nextInt();
         }
-
+//        String s = String.valueOf(n);
+        String s = Integer.toString(n);
+        System.out.println(s);
 
 
 
