@@ -690,18 +690,30 @@ public class Main {
         //-------------------------------------------------
         //yet another fizzbuzz
         // Write a program that prints from 1 to 100 on a new line
-        for (int i = 1; i < 101; i++){
-            if(i % 3 == 0){
-                if(i % 5 == 0){
-                    System.out.println("FizzBuzz");
-                } else {
-                    System.out.println("Fizz");
-                }
-            } else if(i % 5 == 0){
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
+//        for (int i = 1; i < 101; i++){
+//            if(i % 3 == 0){
+//                if(i % 5 == 0){
+//                    System.out.println("FizzBuzz");
+//                } else {
+//                    System.out.println("Fizz");
+//                }
+//            } else if(i % 5 == 0){
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+//-------------------------------------------------
+        //given a number "n", print it's first 10 multiples,
+        // Each multiple N x i where i is between 1 and 10 should be on a new line
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int n = scanner.nextInt();
+        for (int i = 1; i < 11; i++){
+//            System.out.println(n * i);
+
+            System.out.println(n + " x " + i + " = " + (n * i));
         }
 
 
