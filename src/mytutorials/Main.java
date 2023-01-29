@@ -11,6 +11,7 @@ import java.util.*;
 import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
 
@@ -790,17 +791,81 @@ public class Main {
         //Java String Tokens
         //a token is one or more consecutive english letters
         //split a string into tokens and print each token onto a new line
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String s = scanner.nextLine().toString();
+//        String t = "Yee haw partner!";
+//        String delimit = "[.,?! '_@]+";
+//
+//        String [] tokens = s.split(delimit);
+//
+//        System.out.println(tokens.length);
+//        for(String token: tokens)
+//            System.out.println(token);
 
-        String s = scanner.nextLine().toString();
-        String t = "Yee haw partner!";
-        String delimit = "[.,?! '_@]+";
+        //-------------------------------------------------
+        //iterate over a list
 
-        String [] tokens = s.split(delimit);
+        //Array cannot be modified in length, only the values of the array positions
+        //List (ArrayList) can be modified in both ways
 
-        System.out.println(tokens.length);
-        for(String token: tokens)
-            System.out.println(token);
+//        List<String> courses = Arrays.asList("C", "C++", "Java", "Spring", "Hibernate");
+//
+//        //for loop, iterate over List # 1
+//        for(int i = 0; i < courses.size(); i++){
+//            System.out.println(courses.get(i));
+//        }
+        //The size() method of the List interface in Java is used to get the
+        // number of elements in this list. That is, this method returns the
+        // count of elements present in this list container.
+        // Parameters: This method does not take any parameters.
+        // Return Value: This method returns the number of elements in this list.
 
-    }
+        //The java.lang.reflect.Array.get() is an inbuilt method in Java and
+        // is used to return the element at a given index from the specified Array.
+
+        //Array.get(Object []array, int index)
+        //Parameters : This method accepts two mandatory parameters:
+        //array: The object array whose index is to be returned.
+        //index: The particular index of the given array. The element at ‘index’ in
+        // the given array is returned.
+        //Return Value: This method returns the element of the array as type of
+        // Object class.
+
+//        //enhanced for each loop, iterate over List # 2
+//        for(String course: courses) {
+//            System.out.println(course);
+//        }
+//
+//        //basic loop with iterator, iterate over List # 3
+//        for (Iterator iterator = courses.iterator(); iterator.hasNext();){
+//            String course = (String) iterator.next();
+//            System.out.println(course);
+//        }
+//
+//        //iterator with while loop, iterate over List # 4
+//        Iterator<String> iterator = courses.iterator();
+//        while (iterator.hasNext()) {
+//            String course = (String) iterator.next();
+//            System.out.println(course);
+//        }
+//
+//        //java 8 stream + lamda, iterate over List # 5
+//        courses.stream().forEach(course -> System.out.println(course));
+//
+//        //java 8 forEach + lamda, iterate over List # 6
+//        courses.forEach((course) -> System.out.println(course));
+
+        //-------------------------------------------------
+        //ArrayList compareTo
+
+        String[] names = {"Sean Connery", "Roger Moore", "Pierce Brosnan", "Daniel Craig"};
+        String[] names2 = {"Sean", "Connery", "Roger", "Moore", "Pierce", "Brosnan", "Daniel", "Craig"};
+
+        ArrayList<String> bonds = new ArrayList<String>();
+        //ArrayList is a data type that takes a parameter of another data type, here string
+        // it is followed by the variable name "bonds"
+
+
+}
 }
