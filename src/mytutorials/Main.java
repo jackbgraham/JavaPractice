@@ -866,6 +866,75 @@ public class Main {
         //ArrayList is a data type that takes a parameter of another data type, here string
         // it is followed by the variable name "bonds"
 
+        //1 - sort and equals
+
+        ArrayList<String> l1 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
+        ArrayList<String> l2 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
+        ArrayList<String> l3 = new ArrayList<String>(Arrays.asList("B", "A", "D", "C", "F"));
+
+        Collections.sort(l1);
+        Collections.sort(l2);
+        Collections.sort(l3);
+        //.sort() arranges things alphabetically
+
+        System.out.println(l1.equals(l2)); //this is false
+        //this returns a boolean true or false
+
+        System.out.println(l1.equals(l3)); //this is true
+        //since l3 is sorted, it matches l1
+
+        //2 - compare two lists - find different elements:
+
+        ArrayList<String> l4 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
+        ArrayList<String> l5 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
+
+//        l4.removeAll(l5);
+        //this removes all elements of the second list from the first list
+//        System.out.println(l4); // this leaves us with only "F"
+
+        //3 - find out the missing element
+
+        l5.removeAll(l4);
+        System.out.println(l5); // this is the same as the previous thing?
+
+        //4 - find common elements
+        ArrayList<String> lang1 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "JS"));
+        ArrayList<String> lang2 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "PHP"));
+
+        lang1.retainAll(lang2);//this alters lang1 to only retain elements it has in common with lang2
+        System.out.println(lang1);
+
+
+        String word1 = lang1.get(0);
+        String word2 = lang2.get(0);
+        String word3 = lang2.get(3);
+
+        System.out.println(word1.compareTo(word2)); // prints 0, this starts with the same letter
+        System.out.println(word1.compareTo(word3)); // prints 7, the first letters are 7 spaces away alphabetically
+        //compare to goes off the first different character, if you compare "java" and "javu", it returns "20", it is comparing the 4th letters here
+        //a-u = -20
+        //u-a = 20
+
+        //turn a string into a character array
+        char[] ch1 = word1.toCharArray();
+        char[] ch2 = word2.toCharArray();
+
+        System.out.println(ch1[0]); // this returns a J for java
+        System.out.println(ch1[0] + ch1[1]); // this returns numbers for some reason
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 }
+
+
