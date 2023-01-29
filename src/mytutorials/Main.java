@@ -3,15 +3,7 @@
 
 package mytutorials;
 
-import java.security.Principal;
-import java.sql.SQLOutput;
-import java.text.DecimalFormat;
 import java.util.*;
-
-import java.awt.*;
-import java.text.NumberFormat;
-import java.util.Date;
-import java.util.List;
 
 public class Main {
 
@@ -922,19 +914,36 @@ public class Main {
         System.out.println(ch1[0]); // this returns a J for java
         System.out.println(ch1[0] + ch1[1]); // this returns numbers for some reason
 
+        //two strings are called anagrams if they contain the same strings in the same frequency
+        //CAT, CTA, ACT, TCA, TAC
 
+        int word1_length = word1.length();
+        int word2_length = word2.length();
 
+        if (word1_length != word2_length){
+            System.out.println("false");
+        }
 
+        word1 = word1.toLowerCase();
+        word2 = word2.toLowerCase();
+        //this converts them to lower case, in case they are not
 
+        char[] word1CharArr = word1.toCharArray();
+        char[] word2CharArr = word2.toCharArray();
+        //now if we sort the character arrays they will be in alphabetical order
 
+        Arrays.sort(word1CharArr);
+        Arrays.sort(word2CharArr);
+        //now if these were in different order, they'd be in the same order
 
+        System.out.println(Arrays.equals(word1CharArr, word2CharArr)); //returns true, cause it's the same
 
+        //better method in anagram class
 
-
-
-
+        isAnagram compare = new isAnagram("taco", "cato");
+        String c = compare.toString(); //this returns mytutorials.isAnagram@1f32e575
+        System.out.println(c);
 
 }
 }
-
 
