@@ -5,6 +5,8 @@ package mytutorials;
 
 import java.util.*;
 
+import static javax.swing.UIManager.getInt;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -850,99 +852,113 @@ public class Main {
 
         //-------------------------------------------------
         //ArrayList compareTo
+//
+//        String[] names = {"Sean Connery", "Roger Moore", "Pierce Brosnan", "Daniel Craig"};
+//        String[] names2 = {"Sean", "Connery", "Roger", "Moore", "Pierce", "Brosnan", "Daniel", "Craig"};
+//
+//        ArrayList<String> bonds = new ArrayList<String>();
+//        //ArrayList is a data type that takes a parameter of another data type, here string
+//        // it is followed by the variable name "bonds"
+//
+//        //1 - sort and equals
+//
+//        ArrayList<String> l1 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
+//        ArrayList<String> l2 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
+//        ArrayList<String> l3 = new ArrayList<String>(Arrays.asList("B", "A", "D", "C", "F"));
+//
+//        Collections.sort(l1);
+//        Collections.sort(l2);
+//        Collections.sort(l3);
+//        //.sort() arranges things alphabetically
+//
+//        System.out.println(l1.equals(l2)); //this is false
+//        //this returns a boolean true or false
+//
+//        System.out.println(l1.equals(l3)); //this is true
+//        //since l3 is sorted, it matches l1
+//
+//        //2 - compare two lists - find different elements:
+//
+//        ArrayList<String> l4 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
+//        ArrayList<String> l5 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
+//
+////        l4.removeAll(l5);
+//        //this removes all elements of the second list from the first list
+////        System.out.println(l4); // this leaves us with only "F"
+//
+//        //3 - find out the missing element
+//
+//        l5.removeAll(l4);
+//        System.out.println(l5); // this is the same as the previous thing?
+//
+//        //4 - find common elements
+//        ArrayList<String> lang1 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "JS"));
+//        ArrayList<String> lang2 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "PHP"));
+//
+//        lang1.retainAll(lang2);//this alters lang1 to only retain elements it has in common with lang2
+//        System.out.println(lang1);
+//
+//
+//        String word1 = lang1.get(0);
+//        String word2 = lang2.get(0);
+//        String word3 = lang2.get(3);
+//
+//        System.out.println(word1.compareTo(word2)); // prints 0, this starts with the same letter
+//        System.out.println(word1.compareTo(word3)); // prints 7, the first letters are 7 spaces away alphabetically
+//        //compare to goes off the first different character, if you compare "java" and "javu", it returns "20", it is comparing the 4th letters here
+//        //a-u = -20
+//        //u-a = 20
+//
+//        //turn a string into a character array
+//        char[] ch1 = word1.toCharArray();
+//        char[] ch2 = word2.toCharArray();
+//
+//        System.out.println(ch1[0]); // this returns a J for java
+//        System.out.println(ch1[0] + ch1[1]); // this returns numbers for some reason
+//
+//        //two strings are called anagrams if they contain the same strings in the same frequency
+//        //CAT, CTA, ACT, TCA, TAC
+//
+//        int word1_length = word1.length();
+//        int word2_length = word2.length();
+//
+//        if (word1_length != word2_length){
+//            System.out.println("false");
+//        }
+//
+//        word1 = word1.toLowerCase();
+//        word2 = word2.toLowerCase();
+//        //this converts them to lower case, in case they are not
+//
+//        char[] word1CharArr = word1.toCharArray();
+//        char[] word2CharArr = word2.toCharArray();
+//        //now if we sort the character arrays they will be in alphabetical order
+//
+//        Arrays.sort(word1CharArr);
+//        Arrays.sort(word2CharArr);
+//        //now if these were in different order, they'd be in the same order
+//
+//        System.out.println(Arrays.equals(word1CharArr, word2CharArr)); //returns true, cause it's the same
+//
+//        //better method in anagram class
+//
+//        isAnagram compare = new isAnagram("taco", "cato");
+//        String c = compare.toString(); //this returns mytutorials.isAnagram@1f32e575
+//        System.out.println(c);
 
-        String[] names = {"Sean Connery", "Roger Moore", "Pierce Brosnan", "Daniel Craig"};
-        String[] names2 = {"Sean", "Connery", "Roger", "Moore", "Pierce", "Brosnan", "Daniel", "Craig"};
+        //Given an array of integers nums and an integer target, return indices of the two numbers such that they
+        // add up to target. You may assume that each input would have exactly one solution, and you may not use
+        // the same element twice.
+        // You can return the answer in any order.
 
-        ArrayList<String> bonds = new ArrayList<String>();
-        //ArrayList is a data type that takes a parameter of another data type, here string
-        // it is followed by the variable name "bonds"
+//        Input: nums = [2,7,11,15], target = 9
+//        Output: [0,1]
+//        Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+        int[] nums = {2,7,11,15};
 
-        //1 - sort and equals
-
-        ArrayList<String> l1 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
-        ArrayList<String> l2 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
-        ArrayList<String> l3 = new ArrayList<String>(Arrays.asList("B", "A", "D", "C", "F"));
-
-        Collections.sort(l1);
-        Collections.sort(l2);
-        Collections.sort(l3);
-        //.sort() arranges things alphabetically
-
-        System.out.println(l1.equals(l2)); //this is false
-        //this returns a boolean true or false
-
-        System.out.println(l1.equals(l3)); //this is true
-        //since l3 is sorted, it matches l1
-
-        //2 - compare two lists - find different elements:
-
-        ArrayList<String> l4 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "F"));
-        ArrayList<String> l5 = new ArrayList<String>(Arrays.asList("A", "B", "C", "D", "E"));
-
-//        l4.removeAll(l5);
-        //this removes all elements of the second list from the first list
-//        System.out.println(l4); // this leaves us with only "F"
-
-        //3 - find out the missing element
-
-        l5.removeAll(l4);
-        System.out.println(l5); // this is the same as the previous thing?
-
-        //4 - find common elements
-        ArrayList<String> lang1 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "JS"));
-        ArrayList<String> lang2 = new ArrayList<String>(Arrays.asList("Java", "Python", "Ruby", "C#", "PHP"));
-
-        lang1.retainAll(lang2);//this alters lang1 to only retain elements it has in common with lang2
-        System.out.println(lang1);
+        System.out.println(getInt(nums[1]));
 
 
-        String word1 = lang1.get(0);
-        String word2 = lang2.get(0);
-        String word3 = lang2.get(3);
-
-        System.out.println(word1.compareTo(word2)); // prints 0, this starts with the same letter
-        System.out.println(word1.compareTo(word3)); // prints 7, the first letters are 7 spaces away alphabetically
-        //compare to goes off the first different character, if you compare "java" and "javu", it returns "20", it is comparing the 4th letters here
-        //a-u = -20
-        //u-a = 20
-
-        //turn a string into a character array
-        char[] ch1 = word1.toCharArray();
-        char[] ch2 = word2.toCharArray();
-
-        System.out.println(ch1[0]); // this returns a J for java
-        System.out.println(ch1[0] + ch1[1]); // this returns numbers for some reason
-
-        //two strings are called anagrams if they contain the same strings in the same frequency
-        //CAT, CTA, ACT, TCA, TAC
-
-        int word1_length = word1.length();
-        int word2_length = word2.length();
-
-        if (word1_length != word2_length){
-            System.out.println("false");
-        }
-
-        word1 = word1.toLowerCase();
-        word2 = word2.toLowerCase();
-        //this converts them to lower case, in case they are not
-
-        char[] word1CharArr = word1.toCharArray();
-        char[] word2CharArr = word2.toCharArray();
-        //now if we sort the character arrays they will be in alphabetical order
-
-        Arrays.sort(word1CharArr);
-        Arrays.sort(word2CharArr);
-        //now if these were in different order, they'd be in the same order
-
-        System.out.println(Arrays.equals(word1CharArr, word2CharArr)); //returns true, cause it's the same
-
-        //better method in anagram class
-
-        isAnagram compare = new isAnagram("taco", "cato");
-        String c = compare.toString(); //this returns mytutorials.isAnagram@1f32e575
-        System.out.println(c);
 
 }
 }
